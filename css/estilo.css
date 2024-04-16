@@ -77,7 +77,7 @@ a.ativo {
 
 .container h1, h2 {
   text-align: center;
-  color: #a56b6b;
+  color: #063399;
 }
 
 .lista {
@@ -107,7 +107,7 @@ img {
 }
 
 table h4 {
-  color: #a56b6b;
+  color: #063399;
   text-decoration: underline;
   margin-top: 0;
 }
@@ -128,7 +128,7 @@ table h4 {
 
 figcaption {
   font-size: clamp(8px, 2vw, 14px);
-  color: #a56b6b;
+  color: #063399;
 }
 
 figure:hover {
@@ -149,16 +149,11 @@ label {
 }
 
 form legend {
-  color: #a56b6b;
-}
-
-.servicos table {
-  border-color: #d99d9d;
-  border: #333333;
+  color: #063399;
 }
 
 footer {
-  border: 2px solid #d99d9d;
+  border: 2px solid #063399;
   border-radius: 50px 50px 0 0;
   text-align: center;
 }
