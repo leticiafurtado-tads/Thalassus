@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+
+.banner {
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+  left: 5%;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  background-color: #ffffff;
+  opacity: 0.9;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  height: 41.3%;
+  width: 100%;
+  align-items: flex-end; 
+}
+
+nav li a:hover {
+  background-color: #063399;
+  color: #ffffff;
+  font-weight: bold;
+  
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  font-weight: bold;
+}
+
+.menu li {
+  margin-right: 20px;
+
+}
+
+.menu a {
+  display: flex;
+  text-decoration: none;
+  font-size: clamp(16px, 4vw, 20px);
+  padding: 10px;
+  border-radius: 5px;
+  color: #063399;
+}
+
+a.ativo {
+  background-color: #063399;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.container {
+  background-image: url('img/nutri_home.fw.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 75%;
+  padding-top: 10%;
+  padding-left: 20%;
+  padding-right: 20%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container h1, h2 {
+  text-align: center;
+  color: #a56b6b;
+}
+
+.lista {
+  font-size: clamp(8px, 5vw, 16px);
+  color: #333333;
+}
+
+.lista img {
+  float: left;
+  margin-right: 50px;
+  margin-left: 100px;
+}
+
+table {
+  width: 100%;
+}
+
+th, td {
+  border: none;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  width: clamp(50px, 20vw, 200px);
+  height: auto;
+}
+
+table h4 {
+  color: #a56b6b;
+  text-decoration: underline;
+  margin-top: 0;
+}
+
+.galeria {
+  margin: 10px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria figure {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+}
+
+figcaption {
+  font-size: clamp(8px, 2vw, 14px);
+  color: #a56b6b;
+}
+
+figure:hover {
+  transform: scale(2);
+}
+
+form {
+  font-size: clamp(12px, 5vw, 16px);
+  color: #333333;
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+form legend {
+  color: #a56b6b;
+}
+
+.servicos table {
+  border-color: #d99d9d;
+  border: #333333;
+}
+
+footer {
+  border: 2px solid #d99d9d;
+  border-radius: 50px 50px 0 0;
+  text-align: center;
+}
+
+footer img {
+  width: clamp(20px, 5vw, 50px);
+  padding: 20px;
+  text-decoration: none;
+}
+
+footer a, footer p {
+  text-decoration: none;
+  font-size: 12px;
+  margin-top: -10px;
+}
+/* Estilo padrão para o menu */
+.menu-toggle {
+  display: none; /* Esconde o menu hambúrguer por padrão */
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 20px;
+}

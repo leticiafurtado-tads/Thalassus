@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalassus - Dragagem e Mergulho</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <img class="banner" src="img/banner.jpg" alt="fundo banner">
+        <a href="index.html">
+            <img class="logo" src="img/logo.fw.png" alt="logotipo">
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="empresa.html">A empresa</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="lista">
+            <h1>Nutricionista Márcia Furtado</h1>
+            <img src="img/nutrimarcia.jpg" alt="imagem nutricionista">
+            <ul>
+                <li>Pós-Graduação em Nutrição Esportiva;</li>
+                <li>Nutrição Ambulatorial;</li>
+                <li>Curso de Extensão em Nutrição Esportiva;</li>
+                <li>Nutrição Estética;</li>
+                <li>Suplementação em Fitoterápicos.</li>
+            </ul>
+        </div>
+        <h2>Serviços de Nutrição Personalizados</h2>
+        <p>Comprometimento em fornecer serviços de nutrição personalizados para atender às suas necessidades de saúde e bem-estar.
+        Trabalhamos em colaboração com nossos pacientes para criar planos alimentares saudáveis e eficazes.</p>
+        <p>Se você está buscando orientação nutricional, suporte para perda de peso, gerenciamento de condições de saúde específicas
+        ou simplesmente deseja adotar um estilo de vida mais saudável, estamos aqui para ajudar.</p>
+        <table>
+            <tr>
+                <td>
+                    <a href="servicos.html">
+                        <img src="img/img1.jpg" alt="dieta">
+                        <h4>Dieta Personalizada</h4>
+                    </a>
+                    <p>Um plano alimentar é criado exclusivamente para atender às necessidades individuais de cada paciente.</p>
+                </td>
+                <td>
+                    <a href="servicos.html">
+                        <img src="img/img2.jpg" alt="receitas">
+                        <h4>Receitinhas da Nutri</h4>
+                    </a>
+                    <p>Receitas criadas para promover uma alimentação saudável, saborosa e atender às metas de saúde e nutrição.</p>
+                </td>
+                <td>
+                    <a href="servicos.html">
+                        <img src="img/img3.jpg" alt="online">
+                        <h4>Nutrição Online</h4>
+                    </a>
+                    <p>Consultas e orientação nutricional por meio de videochamadas, e-mails ou aplicativos de mensagens.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <a href="https://contate.me/marcianutri">
+            <img src="img/whats.png" alt="whatsapp">
+        </a>
+        <a href="https://www.facebook.com/marcianutri">
+            <img src="img/face.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/marcianutri">
+            <img src="img/insta.png" alt="instagram">
+        </a>
+        <p>Rua Bento Gonçalves, 297 - Cidade Nova- Rio Grande/RS<br>
+        Telefone: (53) 9 9105 6551 - e-mail: marciafurtado.nutri@gmail.com</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.menu');
+            menu.classList.toggle('show-menu');
+        }
+    </script>
+</body>
+</html>
