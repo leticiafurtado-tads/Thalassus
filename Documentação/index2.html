@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalassus - Dragagem e Mergulho</title>
+    <link rel="icon" type="image/png" href="img/logoo.fw.png">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/banner1.jpg" class="slide active" alt="Imagem 1">
+            <img src="img/banner2.jpg" class="slide" alt="Imagem 2">
+            <img src="img/banner3.jpg" class="slide" alt="Imagem 3">
+        </div>
+        <nav>
+            <!-- Logo no menu fixo -->
+            <a href="index.html">
+                <img class="logo-large" src="img/logo.fw.png" alt="logotipo">
+                <img class="logo-small oculto" src="img/logoh.fw.png" alt="logotipo">
+            </a>
+            <!-- Botão de menu hambúrguer -->
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="empresa.html">A empresa</a></li>
+                <li><a href="servicos.html">Serviços</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Sobre a Thalassus</h1>
+        <p>A Thalassus é uma empresa especializada em soluções integradas de dragagem e mergulho, oferecendo serviços de alta qualidade para atender às necessidades dos clientes em diversas áreas.</p>
+        <br>
+        <h3>Nossos Serviços</h3>
+
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="image">
+                    <img src="img/dragagem.jpg" alt="Imagem 1">
+                </div>
+                <div class="image">
+                    <img src="img/batimetria.jpg" alt="Imagem 2">
+                </div>
+                <div class="image">
+                    <img src="img/locações.jpg" alt="Imagem 3">
+                </div>
+                <div class="image">
+                    <img src="img/mergulho.jpg" alt="Imagem 4">
+                </div>
+            </div>
+            <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+            <button class="next" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+    <footer>
+        <a href="https://contate.me/thalassus">
+            <img src="img/whats.fw.png" alt="whatsapp">
+        </a>
+        <a href="https://www.facebook.com/thalassus">
+            <img src="img/face.fw.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/thalassus">
+            <img src="img/insta.fw.png" alt="instagram">
+        </a>
+        <p><b>Rua Bento Gonçalves, 297 - Cidade Nova- Rio Grande/RS<br>
+        Telefone: (53) 9 9105 6551 - e-mail: thalassus@thalassus.com.br</b></p>
+        <br>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll('.slide');
+            let index = 0;
+
+            function showSlide() {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+                index = (index + 1) % slides.length;
+            }
+
+            setInterval(showSlide, 3000); // Alteração do intervalo para 3 segundos
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const logoLarge = document.querySelector('.logo-large');
+            const logoSmall = document.querySelector('.logo-small');
+            const menu = document.querySelector('nav');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('ativo');
+                logoLarge.classList.toggle('oculto');
+                logoSmall.classList.toggle('oculto');
+            });
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    menu.classList.add('scroll');
+                    logoLarge.classList.add('oculto');
+                    logoSmall.classList.remove('oculto');
+                } else {
+                    menu.classList.remove('scroll');
+                    logoLarge.classList.remove('oculto');
+                    logoSmall.classList.add('oculto');
+                }
+            });
+        });
+
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.image');
+
+        function changeImage(n) {
+            currentIndex += n;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+            updateGallery();
+        }
+
+        function updateGallery() {
+            const offset = -100 * currentIndex;
+            document.querySelector('.gallery').style.transform = `translateX(${offset}%)`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalassus - Dragagem e Mergulho</title>
+    <link rel="icon" type="image/png" href="img/logoo.fw.png">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/banner1.jpg" class="slide active" alt="Imagem 1">
+            <img src="img/banner2.jpg" class="slide" alt="Imagem 2">
+            <img src="img/banner3.jpg" class="slide" alt="Imagem 3">
+        </div>
+        <nav>
+            <!-- Logo no menu fixo -->
+            <a href="index.html">
+                <img class="logo-large" src="img/logo.fw.png" alt="logotipo">
+                <img class="logo-small oculto" src="img/logoh.fw.png" alt="logotipo">
+            </a>
+            <!-- Botão de menu hambúrguer -->
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">A empresa</a></li>
+                <li class="submenu-item">
+                    <a class="ativo" class="submenu-trigger">Serviços <span class="submenu-arrow">▾</span></a>
+                    <ul class="submenu">
+                        <li><a href="dragagem.html">Dragagem</a></li>
+                        <li><a href="batimetria.html">Batimetria</a></li>
+                        <li><a href="locacao.html">Locação de Equipamentos</a></li>
+                        <li><a href="mergulho.html">Mergulho</a></li>
+                    </ul>
+                </li>
+                         
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h3>Nossos Serviços</h3>
+        <div class="galeria">
+            <figure>
+                <img src="img/dragagem.jpg" alt="Imagem 1">
+                <figcaption>Desassoreamento de canais, rios e lagos</figcaption>
+            </figure>
+            <figure>
+                <img src="img/batimetria.jpg" alt="Imagem 1">
+                <figcaption>Levantamentos hidrográficos em canais, rios e lagos</figcaption>
+            </figure>
+            <figure>
+                <img src="img/locações.jpg" alt="Imagem 1">
+                <figcaption>Ampla variedade de equipamentos para locação</figcaption>
+            </figure>
+            <figure>
+                <img src="img/mergulho.jpg" alt="Imagem 1">
+                <figcaption>Equipe de mergulhadores altamente treinados e certificados</figcaption>
+            </figure>
+            </div>
+        <div class="servicos">
+        </div>
+    </div>
+    <footer>
+        <a href="https://contate.me/thalassus">
+            <img src="img/whats.fw.png" alt="whatsapp">
+        </a>
+        <a href="https://www.facebook.com/thalassus">
+            <img src="img/face.fw.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/thalassus">
+            <img src="img/insta.fw.png" alt="instagram">
+        </a>
+        <p><b>Rua Bento Gonçalves, 297 - Cidade Nova- Rio Grande/RS<br>
+        Telefone: (53) 9 9105 6551 - e-mail: thalassus@thalassus.com.br</b></p>
+        <br>
+</footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.slide');
+    let index = 0;
+
+    function showSlide() {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+        index = (index + 1) % slides.length;
+    }
+
+    setInterval(showSlide, 3000);
+
+    var menu = document.querySelector('nav');
+    var menuToggle = document.querySelector('.menu-toggle');
+    var logoLarge = document.querySelector('.logo-large');
+    var logoSmall = document.querySelector('.logo-small');
+
+    menuToggle.addEventListener('click', function() {
+        menu.classList.toggle('ativo');
+        logoLarge.classList.toggle('oculto');
+        logoSmall.classList.toggle('oculto');
+    });
+
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            menu.classList.add('scroll');
+            logoLarge.classList.add('oculto');
+            logoSmall.classList.remove('oculto');
+        } else {
+            menu.classList.remove('scroll');
+            logoLarge.classList.remove('oculto');
+            logoSmall.classList.add('oculto');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

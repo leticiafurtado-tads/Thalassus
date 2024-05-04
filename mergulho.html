@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thalassus - Dragagem e Mergulho</title>
+    <link rel="icon" type="image/png" href="img/logo.fw.png">
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <style>
+        .banner img {
+            opacity: 0.2; /* Aplica opacidade apenas à imagem */
+        }
+
+        .banner h1, .banner p {
+            color: #063399; /* Ajuste a cor do texto conforme necessário */
+            font-size: 3rem; /* Ajuste o tamanho da fonte conforme necessário */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Garante que o texto fique sobre a imagem */
+            margin: 0; /* Remova a margem padrão */
+        }
+
+        .banner p {
+            margin-top: 7rem; /* Adicione uma margem superior ao parágrafo */
+            width: 80%;
+            text-align: center;
+        }
+        .banner h1{
+            margin-top: -7rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <img src="img/mergulho.jpg" class="slide active" alt="Imagem 1">
+            <h1>MERGULHO</h1>
+            <p>Equipe de mergulhadores altamente treinados e equipados para realizar uma ampla gama de serviços subaquáticos, incluindo inspeções, reparos, instalações e manutenção em estruturas submersas.</p> <!-- Texto sobre a imagem -->
+        </div>
+        <nav>
+            <!-- Logo no menu fixo -->
+            <a href="index.html">
+                <img class="logo-large" src="img/logo.fw.png" alt="logotipo">
+                <img class="logo-small oculto" src="img/logoh.fw.png" alt="logotipo">
+            </a>
+            <!-- Botão de menu hambúrguer -->
+            <button class="menu-toggle">☰</button>
+            <ul class="menu">
+                <li><a href="index.html">A empresa</a></li>
+                <li class="submenu-item">
+                    <a class="ativo" class="submenu-trigger">Serviços <span class="submenu-arrow">▾</span></a>
+                    <ul class="submenu">
+                        <li><a href="dragagem.html">Dragagem</a></li>
+                        <li><a href="batimetria.html">Batimetria</a></li>
+                        <li><a href="locacao.html">Locação de Equipamentos</a></li>
+                        <li><a href="mergulho.html">Mergulho</a></li>
+                    </ul>
+                </li>
+                         
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    </div>
+    <footer>
+        <a href="https://contate.me/thalassus">
+            <img src="img/whats.fw.png" alt="whatsapp">
+        </a>
+        <a href="https://www.facebook.com/thalassus">
+            <img src="img/face.fw.png" alt="facebook">
+        </a>
+        <a href="https://www.instagram.com/thalassus">
+            <img src="img/insta.fw.png" alt="instagram">
+        </a>
+        <p><b>Rua Bento Gonçalves, 297 - Cidade Nova- Rio Grande/RS<br>
+        Telefone: (53) 9 9105 6551 - e-mail: thalassus@thalassus.com.br</b></p>
+        <br>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const slides = document.querySelectorAll('.slide');
+            let index = 0;
+
+            var menu = document.querySelector('nav');
+            var menuToggle = document.querySelector('.menu-toggle');
+            var logoLarge = document.querySelector('.logo-large');
+            var logoSmall = document.querySelector('.logo-small');
+
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('ativo');
+                logoLarge.classList.toggle('oculto');
+                logoSmall.classList.toggle('oculto');
+            });
+
+            menu.classList.add('scroll');
+            logoLarge.classList.add('oculto');
+            logoSmall.classList.remove('oculto');
+        });
+    </script>
+</body>
+</html>
